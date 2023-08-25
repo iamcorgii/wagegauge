@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: white;
+  font-family: 'Varela Round', sans-serif;
+  background: linear-gradient(226deg, #21a784, #00bb0f, #024308, #5d9d38, #21a784);
+  background-size: 1000% 1000%;
+
+  -webkit-animation: GradientScroll 43s ease infinite;
+  -moz-animation: GradientScroll 43s ease infinite;
+  animation: GradientScroll 43s ease infinite;
+}
+
+@-webkit-keyframes GradientScroll {
+  0%{background-position:0% 25%}
+  50%{background-position:100% 76%}
+  100%{background-position:0% 25%}
+}
+@-moz-keyframes GradientScroll {
+  0%{background-position:0% 25%}
+  50%{background-position:100% 76%}
+  100%{background-position:0% 25%}
+}
+@keyframes GradientScroll {
+  0%{background-position:0% 25%}
+  50%{background-position:100% 76%}
+  100%{background-position:0% 25%}
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+#earnedAmount {
+  font-size: 64px; /* Large text size */
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent green background */
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 2rem 0rem;
+}
+
+.earnedDiv {
+  margin: 2rem 0;
+}
+
+#timeElapsed {
+  font-size: 32px;
+}
+
+#startTime {
+  font-weight: normal;
+  transition: font-weight 1s;
+}
+
+#earnedTextDisplay {
+  font-size: 32px;
+}
+
+/* ... (your existing styles) */
+
+.hidden {
+  display: none !important;
+}
+
+#logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+#dulltext {
+  opacity: 0.5;
+  font-size: small;
+}
+
+#inputContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="time"],
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
