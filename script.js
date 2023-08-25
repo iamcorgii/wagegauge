@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const calculateButton = document.getElementById("calculateButton");
   const startTimeInput = document.getElementById("startTime");
   const hourlyPayInput = document.getElementById("hourlyPay");
+  const moneySymbolInput = document.getElementById("moneySymbol");
   const earnedAmountElement = document.getElementById("earnedAmount");
   const startTimeDisplayElement = document.getElementById("startTimeDisplay");
   
@@ -56,9 +57,9 @@ document.addEventListener("DOMContentLoaded", function() {
   }
   
   function updateTabTitleAndElement(earnedAmount, startTime) {
-      document.title = `$${earnedAmount} Earned | Hourly Pay Calculator`;
+      document.title = `+${moneySymbolInput.value}${earnedAmount}`;
       
-      earnedAmountElement.textContent = `$${earnedAmount}`;
+      earnedAmountElement.textContent = `${moneySymbolInput.value}${earnedAmount}`;
       startTimeDisplayElement.textContent = `${formatTime(startTime)}`;
   }
 });

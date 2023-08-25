@@ -1,42 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculate your earnings based on your hourly pay and work start time. Simple and easy-to-use hourly pay calculator." />
     <title>Hourly Pay Calculator</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?" />
-    <link rel="manifest" href="site.webmanifest" />
-  </head>
-  <body>
-    <div id="logo">WageGauge<span id="dulltext">.corgii.dev</span></div>
-    <div class="container">
-      <div id="inputContainer">
-        <label for="startTime">Start Time:</label>
-        <input type="time" id="startTime" required />
-        <br />
-        <label for="hourlyPay">Hourly Pay:</label>
-        <input type="number" id="hourlyPay" min="0.01" step="0.01" required />
-        <br />
-        <button id="calculateButton">Calculate</button>
-      </div>
-      <div id="outputContainer" class="hidden">
-        <p id="earnedTextDisplay">You have earned</p>
-        <p class="earnedDiv"><span id="earnedAmount">$0.00</span></p>
-        <p id="timeElapsed">
-          since <span id="startTimeDisplay">start time</span>
-        </p>
-        <p id="dulltext">*pre-tax</p>
-      </div>
-    </div>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+</head>
+<body>
+    <header>
+        <div id="logo">WageGauge<span id="dulltext">.corgii.dev</span></div>
+    </header>
+    <main>
+        <div class="container">
+            <div id="inputContainer">
+                <label for="startTime">When did you start work?</label>
+                <a>(HH:MM AM/PM)</a>
+                <input type="time" id="startTime" value="09:00" required>
+                <br>
+                <label for="hourlyPay">How much do you get paid an hour?</label>
+                <input type="number" id="hourlyPay" min="0.01" step="0.01" required>
+                <br>
+                <label for="moneySymbol">What symbol does your currency use?</label>
+                <a>($, €, ¥, etc.)</a>
+                <input type="text" id="moneySymbol" value="$" maxlength=1 required>
+                <br>
+                <button id="calculateButton">Start</button>
+            </div>
+            <div id="outputContainer" class="hidden">
+                <p id="earnedTextDisplay">You have earned</p>
+                <p class="earnedDiv"><span id="earnedAmount">$0.00</span></p>
+                <p id="timeElapsed">
+                    since <span id="startTimeDisplay">start time</span>
+                </p>
+                <p id="dulltext">*pre-tax</p>
+            </div>
+        </div>
+    </main>
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
